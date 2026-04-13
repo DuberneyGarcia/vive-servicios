@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Crear Servicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Vive Servicios">
+            </a>
+        </div>
+
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+            <li><a href="crear.html">Crear</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero crear-hero">
+        <h1>Crear nuevo servicio</h1>
+    </section>
+
+    <!-- ================= FORMULARIO ================= -->
+    <section class="contenedor">
+
+        <!-- FORMULARIO -->
+        <form class="formulario-crear" onsubmit="crearServicio(event)">
+
+            <label>Nombre del servicio</label>
+            <input type="text" id="nombre-servicio" required>
+
+            <label>Detalle del servicio</label>
+            <input type="text" id="detalle-servicio" required>
+
+            <label>Categoría</label>
+            <input type="text" id="categoria-servicio" required>
+
+            <label>Duración</label>
+            <input type="text" id="duracion-servicio" placeholder="Ej: 3 meses" required>
+
+            <label>Modalidad</label>
+            <input type="text" id="modalidad-servicio" placeholder="Ej: Virtual" required>
+
+            <label>Nivel</label>
+            <input type="text" id="nivel-servicio" placeholder="Ej: Básico" required>
+
+            <label>Instructor</label>
+            <input type="text" id="instructor-servicio" required>
+
+            <!-- Imagen -->
+            <label>Imagen</label>
+            <input type="file" id="imagen-servicio" accept="image/*">
+
+            <img id="preview-img" style="max-width:100%; display:none; margin-top:10px;">
+
+            <!-- Botones -->
+            <div class="acciones">
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="window.location.href='index.html'">Cancelar</button>
+            </div>
+
+        </form>
+
+        <!-- Volver -->
+        <div class="volver">
+            <a href="index.html" class="btn-ver">Volver al inicio</a>
+        </div>
+
+    </section>
+
+    <!-- ================= MODAL (IMPORTANTE) ================= -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button onclick="cerrarModal()">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
